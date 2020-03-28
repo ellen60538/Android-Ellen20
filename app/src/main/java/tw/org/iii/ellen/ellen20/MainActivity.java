@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements FileChooser.Choos
             getSupportFragmentManager()
             .beginTransaction()
             .add(R.id.container,fileChooserFragment)
+            //用replace才不會疊在一起
             .commit();
         } catch (ExternalStorageNotAvailableException e) {
             e.printStackTrace();
